@@ -1,0 +1,663 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #4d4d5c;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.clear {
+    clear: both;
+}
+
+.img-responsive{
+    max-width: 100%;
+    display: block;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-flex{
+    display: flex;
+
+}
+
+button,
+input,
+select {
+    outline: none;
+    font-family: sans-serif;
+}
+
+
+
+/*Header*/
+header {
+    height: 100px;
+    background: #4d4d5c;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-transform: uppercase;
+    color: #6cc891;
+    font-weight: 200;
+}
+
+.menu a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu .esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0, 4s;
+}
+
+.mostrar-menu {
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: #6cc891;
+}
+
+#check {
+    display: none;
+}
+
+/*Banner*/
+#banner {
+    padding: 0 50px;
+    background-image: url(../images/banner-kobe-mj.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-banner {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banner::before {
+    content: ´¨´;
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner h2 {
+    font-size: 30 px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h2 span {
+    font-weight: 600;
+}
+
+/**Personas**/
+#personas{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#personas img{
+    border-radius: 5%;
+}
+
+#personas div{
+    padding: 30px 30px;
+}
+
+#personas div h4{
+    color: white;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#personas div p{
+    color: white;
+    font-size: 18px;
+}
+
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: #6cc091;
+    padding: 10px 30px;
+    border: 3px solid #6cc091;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-saber-mas:hover{
+    background: #6cc091;
+    color: #fff;
+}
+
+/*Responsive*/
+@media(max-width: 768px) {
+
+    /*Header*/
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+
+    #playoff {
+        flex-direction: column;
+    }
+    
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4d4d5c;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+    
+    .esconder-menu {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    
+    #check:checked~.menu {
+        right: 0;
+    }
+    
+    .footer {
+        margin-left: 150px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        list-style: none;
+        display: inline-block;
+        font-size: 15px;
+    }
+
+    #personas{
+        flex-direction: column;
+    }
+
+}
+
+/**carrusel**/
+.slide{
+    margin-top: 10px;
+}
+
+.slide img{
+    height: 90vh;
+}
+
+carousel-caption d-none d-md-block{
+    color: black;
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**pagina nba**/
+
+/*Reset*/
+
+header-nba {
+    height: 100px;
+    background: #4d4d5c;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nba {
+    text-transform: uppercase;
+    color: #6cc891;
+    font-weight: 200;
+}
+
+.menu-nba a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu-nba .esconder-menu-nba {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0, 4s;
+}
+
+.mostrar-menu-nba {
+    order: 1;
+}
+
+.menu-nba a:hover,
+.mostrar-menu-nba:hover,
+.esconder-menu-nba:hover {
+    color: #6cc891;
+}
+
+#check-nba {
+    display: none;
+}
+
+/*Banner*/
+#banner-nba {
+    padding: 0 50px;
+    background-image: url(./images/banner-playoff-nba.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-banner-nba {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banner-nba::before {
+    content: ´¨´;
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner-nba h2 {
+    font-size: 30 px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner-nba h2 span {
+    font-weight: 600;
+}
+
+.slide-nba{
+    margin-top: 10px;
+}
+
+/** Pagina Futbol**/
+
+
+header-futbol {
+    height: 100px;
+    background: #4d4d5c;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-futbol {
+    text-transform: uppercase;
+    color: #6cc891;
+    font-weight: 200;
+}
+
+.menu-futbol a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu-futbol .esconder-menu-futbol {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0, 4s;
+}
+
+.mostrar-menu-futbol {
+    order: 1;
+}
+
+.menu-futbol a:hover,
+.mostrar-menu-futbol:hover,
+.esconder-menu-futbol:hover {
+    color: #6cc891;
+}
+
+#check-futbol {
+    display: none;
+}
+
+/*Banner*/
+#banner-futbol {
+    padding: 0 50px;
+    background-image: url(./images/futbol-nenes.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-banner-futbol {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banner-futbol::before {
+    content: ´¨´;
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner-futbol h2 {
+    font-size: 30 px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner-futbol h2 span {
+    font-weight: 600;
+}
+
+.slide-futbol{
+    margin-top: 10px;
+}
+
+.container-futbol-card{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container-futbol-card .card-futbol{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    color: white;
+}
+
+.container-futbol-card .card-futbol:hover{
+    transform: translateY(-15PX);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+
+}
+
+.container-futbol-card .card-futbol img{
+    width: 330px;
+    height: 220px;
+}
+
+.container-futbol-card .card-futbol h4{
+    font-weight: 600;
+}
+
+.container-futbol-card .card-futbol p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container-futbol-card .card-futbol a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+/**Pagina de Curiosidades**/
+
+header-curiosidades {
+    height: 100px;
+    background: #4d4d5c;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-curiosidades {
+    text-transform: uppercase;
+    color: #6cc891;
+    font-weight: 200;
+}
+
+.menu-curiosidades a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu-curiosidades .esconder-menu-curiosidades {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0, 4s;
+}
+
+.mostrar-menu-curiosidades {
+    order: 1;
+}
+
+.menu-curiosidades a:hover,
+.mostrar-menu-curiosidades:hover,
+.esconder-menu-curiosidades:hover {
+    color: #6cc891;
+}
+
+#check-curiosidades {
+    display: none;
+}
+
+/*Banner*/
+#banner-curiosidades {
+    padding: 0 50px;
+    background-image: url(./images/sabias-que.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-banner-curiosidades {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banner-curiosidades::before {
+    content: ´¨´;
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner-curiosidades h2 {
+    font-size: 30 px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner-curiosidades h2 span {
+    font-weight: 600;
+}
+
+.slide-curiosidades{
+    margin-top: 10px;
+}
+
+
+/**Pagina de Contacto**/
+
+header-contacto {
+    height: 100px;
+    background: #4d4d5c;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-contacto {
+    text-transform: uppercase;
+    color: #6cc891;
+    font-weight: 200;
+}
+
+.menu-contacto a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu-contacto .esconder-menu-contacto {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0, 4s;
+}
+
+.mostrar-menu-contacto {
+    order: 1;
+}
+
+.menu-contacto a:hover,
+.mostrar-menu-contacto:hover,
+.esconder-menu-contacto:hover {
+    color: #6cc891;
+}
+
+#check-contacto {
+    display: none;
+}
+
+/*Banner*/
+#banner-contacto {
+    padding: 0 50px;
+    background-image: url(./images/contacto.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-banner-contacto {
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#banner-contacto::before {
+    content: ´¨´;
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner-contacto h2 {
+    font-size: 30 px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner-contacto h2 span {
+    font-weight: 600;
+}
+
+.slide-contacto{
+    margin-top: 10px;
+}
